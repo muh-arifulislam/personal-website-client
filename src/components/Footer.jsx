@@ -17,13 +17,31 @@ const Footer = () => {
         style={{ padding: "15px 70px" }}
       >
         <div>
-          <a href="#" className="me-4 text-decoration-none" style={{color:"#aaa"}}>
+          <a
+            href="https://www.facebook.com/muh.arifulislam/"
+            target="_blank"
+            rel="noreferrer"
+            className="me-4 text-decoration-none"
+            style={{ color: "#aaa" }}
+          >
             Facebook
           </a>
-          <a href="#" className="me-4 text-decoration-none" style={{color:"#aaa"}}>
+          <a
+            href="https://twitter.com/muh_arifulislam"
+            target="_blank"
+            rel="noreferrer"
+            className="me-4 text-decoration-none"
+            style={{ color: "#aaa" }}
+          >
             Twitter
           </a>
-          <a href="#" className="me-4 text-decoration-none" style={{color:"#aaa"}}>
+          <a
+            href="https://www.linkedin.com/in/muh-arifulislam/"
+            target="_blank"
+            rel="noreferrer"
+            className="me-4 text-decoration-none"
+            style={{ color: "#aaa" }}
+          >
             LinkedIn
           </a>
         </div>

@@ -52,3 +52,24 @@
   background-color: #007ced;
   width: 30px;
 }
+.swiper-button-prev {
+  left: 16px;
+}
+.swiper-button-next {
+  right: 17px;
+}
+.swiper-button-prev::after {
+  font-size: 16px;
+  background-color: white;
+  padding: 10px 15px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.swiper-button-next::after {
+  font-size: 28px;
+  background-color: white;
+  padding: 10px 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}

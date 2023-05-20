@@ -17,6 +17,17 @@ body {
   -moz-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
 }
+@keyframes wave {
+  0% {
+    border-image-slice: 100% 0%;
+  }
+  50% {
+    border-image-slice: 0% 100%;
+  }
+  100% {
+    border-image-slice: 100% 0%;
+  }
+}
 .hp-inner {
   background-position: center;
   background-repeat: no-repeat;
@@ -262,12 +273,12 @@ body {
   top: 2px;
   position: relative;
 }
-.offcanvas.offcanvas-start {
+/* .offcanvas.offcanvas-start {
   opacity: 0;
 }
 .offcanvas.offcanvas-start.show {
   opacity: 1;
-}
+} */
 .skeleton-loader {
   border-radius: 20px;
   display: flex;

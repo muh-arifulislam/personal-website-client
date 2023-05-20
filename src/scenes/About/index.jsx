@@ -56,17 +56,32 @@ const About = () => {
             </p>
             <ul>
               <li className="mb-2 underline-link-li">
-                <a href="#" className="underline-link">
+                <a
+                  href="https://www.linkedin.com/in/muh-arifulislam/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline-link"
+                >
                   LinkdedIn
                 </a>
               </li>
               <li className="mb-2 underline-link-li">
-                <a href="#" className="underline-link">
+                <a
+                  href="https://twitter.com/muh_arifulislam"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline-link"
+                >
                   Twitter
                 </a>
               </li>
               <li className="mb-2 underline-link-li">
-                <a href="#" className="underline-link">
+                <a
+                  href="https://github.com/muh-arifulislam"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline-link"
+                >
                   Github
                 </a>
               </li>
@@ -94,7 +109,10 @@ const About = () => {
         </div>
         <div className="col-xs-12 col-sm-4">
           <div className="ps-lg-5">
-            <div className="rounded px-4 py-4 mb-3" style={{backgroundColor:"#e6e6e6"}}>
+            <div
+              className="rounded px-4 py-4 mb-3"
+              style={{ backgroundColor: "#e6e6e6" }}
+            >
               <h4 className="fs-6 mb-4">ME</h4>
               <div>
                 <img className="img-fluid rounded-3" src={image} alt="" />

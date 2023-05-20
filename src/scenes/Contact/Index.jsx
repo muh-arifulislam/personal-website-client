@@ -13,15 +13,14 @@ const Contact = () => {
     <div className="">
       <PageTittle title="Contact" subtitle="Get In Touch"></PageTittle>
       <div className="">
-        <div className="my-4">
+        <div className="mb-5">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3660.002286358846!2d91.18080701069078!3d23.460382020089884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1683940263065!5m2!1sen!2sbd"
             title="address"
             height="150"
             style={{ width: "100%" }}
-            allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div className="row">
@@ -35,10 +34,9 @@ const Contact = () => {
                 ></FontAwesomeIcon>
               </div>
               <div className="ps-3">
-                <h4 className="fs-5 mb-1">415-832-2000</h4>
+                <h4 className="fs-5 mb-1">+880 1306-56-07-47</h4>
                 <p className="fs-6">
-                  Duis erat leo, aliquam laoreet fringilla quis, pretium vitae
-                  dui.
+                  Nock nock!! Give me a text on Whatsapp. 
                 </p>
               </div>
             </div>
@@ -51,10 +49,9 @@ const Contact = () => {
                 ></FontAwesomeIcon>
               </div>
               <div className="ps-3">
-                <h4 className="fs-5 mb-1">415-832-2000</h4>
+                <h4 className="fs-5 mb-1">Sadar South, Cumilla</h4>
                 <p className="fs-6">
-                  Duis erat leo, aliquam laoreet fringilla quis, pretium vitae
-                  dui.
+                  Sadar South, Cumilla, Bangladesh
                 </p>
               </div>
             </div>
@@ -63,27 +60,27 @@ const Contact = () => {
                 <FontAwesomeIcon
                   color="blue"
                   icon={faEnvelope}
-                  size="2x"
+                  size="xl"
                 ></FontAwesomeIcon>
               </div>
               <div className="ps-3">
-                <h4 className="fs-5 mb-1">415-832-2000</h4>
+                <h4 className="fs-5 mb-1" style={{wordBreak:"break-word"}}>ariful.islam20234@gmail.com</h4>
                 <p className="fs-6">
-                  Duis erat leo, aliquam laoreet fringilla quis, pretium vitae
-                  dui.
+                  Say hi on email! I always appreciate
+                  meeting new people.
                 </p>
               </div>
             </div>
           </div>
-          <div className="col-xs-12 col-sm-8 px-4">
+          <div className="col-xs-12 col-sm-8">
             <SectionTitle>How Can I Help You?</SectionTitle>
             <div>
-              <form class="row g-3">
-                <div class="col-md-6">
+              <form className="row g-3">
+                <div className="col-md-6">
                   <div className="mb-3">
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       id="inputEmail4"
                       placeholder="Full Name"
                     />
@@ -91,7 +88,7 @@ const Contact = () => {
                   <div className="mb-3">
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       id="inputEmail4"
                       placeholder="Email Address"
                     />
@@ -99,35 +96,35 @@ const Contact = () => {
                   <div className="mb-3">
                     <input
                       type="email"
-                      class="form-control"
+                      className="form-control"
                       id="inputEmail4"
                       placeholder="Subject"
                     />
                   </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <div className="col-md-6 mb-3">
                   <textarea
                     style={{ height: "100%" }}
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="inputPassword4"
                     placeholder="Your Message"
                   />
                 </div>
-                <div class="col-12">
-                  <div class="form-check">
+                <div className="col-12">
+                  <div className="form-check">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       id="gridCheck"
                     />
-                    <label class="form-check-label" for="gridCheck">
+                    <label className="form-check-label" htmlFor="gridCheck">
                       Check me out
                     </label>
                   </div>
                 </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">
+                <div className="col-12">
+                  <button type="submit" className="btn btn-primary">
                     Send Message
                   </button>
                 </div>
