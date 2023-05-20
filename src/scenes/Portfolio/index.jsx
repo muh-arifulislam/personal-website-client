@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageTittle from "../../components/PageTittle";
 import image from "../../assets/images/portfolioItem.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,63 +8,51 @@ import {
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCalendar, faGlobe, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendar,
+  faGlobe,
+  faReceipt,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import ProjectItem from "../../components/ProjectItem";
+import SkeletonLoader from "../../components/SkeletonLoader";
 const Porfolio = () => {
+  const [hover, setHover] = useState(false);
+  const [projects, setProjects] = useState([]);
+  const [project, setProject] = useState({});
+  useEffect(() => {
+    setTimeout(() => {
+      setProjects([
+        { title: "fullstack projects" },
+        { title: "frontend projects" },
+      ]);
+    }, 1000);
+  }, []);
   return (
     <div className="position-relative">
       <PageTittle title="Portfolio" subtitle=""></PageTittle>
       <div>
-        <div className="row g-2">
-          <div className="col-xs-12 col-sm-6 ">
-            <div className="p-2">
-              <div className="position-relative overflow-hidden">
-                <img className="img-fluid rounded-3" src={image} alt="" />
-                <div
-                  className="px-2 rounded-3 bg-white position-absolute"
-                  style={{ top: "20px", left: "20px" }}
-                >
-                  <span className="fw-semibold">Full Projects</span>
-                </div>
-                <div
-                  className="px-2 rounded-3 position-absolute"
-                  style={{
-                    backgroundColor: "white",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translateX(-50%) translateY(-50%)",
-                  }}
-                >
-                  <a
-                    class="btn btn-primary"
-                    data-bs-toggle="offcanvas"
-                    href="#offcanvasExample"
-                    role="button"
-                    aria-controls="offcanvasExample"
-                  >
-                    Link with href
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xs-12 col-sm-6">
-            <div className="p-2">
-              <div className="position-relative overflow-hidden">
-                <img className="img-fluid rounded-3" src={image} alt="" />
-                <div
-                  className="px-2 rounded-3 bg-white position-absolute"
-                  style={{ top: "20px", left: "20px" }}
-                >
-                  <span className="fw-semibold">Full Projects</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="row g-4">
+          {projects.length === 0 ? (
+            <>
+              <SkeletonLoader></SkeletonLoader>
+              <SkeletonLoader></SkeletonLoader>
+            </>
+          ) : (
+            projects.map((project, idx) => (
+              <ProjectItem
+                data={project}
+                setProject={setProject}
+                key={idx}
+              ></ProjectItem>
+            ))
+          )}
         </div>
       </div>
+      {/* Offcanvas  */}
       <div>
         <div
-          style={{ width: "100%" }}
+          style={{ width: "100%", transition: "all 0.8s ease-out" }}
           className="offcanvas offcanvas-start"
           tabindex="-1"
           id="offcanvasExample"
@@ -77,13 +65,13 @@ const Porfolio = () => {
                   <button
                     type="button"
                     className="btn-close"
-                    style={{padding:"12px 12px",backgroundColor:"gray"}}
+                    style={{ padding: "12px 12px", backgroundColor: "gray" }}
                     data-bs-dismiss="offcanvas"
                     aria-label="Close"
                   ></button>
                 </div>
                 <div className="mb-5">
-                  <h1 className="fs-2 fw-bold">Full Stack Projects</h1>
+                  <h1 className="fs-2 fw-bold">{project?.title}</h1>
                 </div>
                 <div className="row g-5">
                   <div className="col-xs-12 col-sm-8 ">

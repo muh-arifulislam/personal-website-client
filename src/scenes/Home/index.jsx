@@ -1,35 +1,25 @@
 import React, { useContext, useState, useRef } from "react";
-import { useMediaQuery } from "react-responsive";
+
 import personImg from "../../assets/images/person.jpg";
 import StateContext from "../../state/StateContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBullhorn,
+  faClock,
   faCoffee,
   faDesktop,
   faHeart,
+  faMugHot,
+  faMugSaucer,
   faPencil,
-  faQuoteLeft,
-  faQuoteRight,
+  faStar,
   faStore,
 } from "@fortawesome/free-solid-svg-icons";
 import image from "../../assets/images/person.jpg";
 import Button from "../../components/Button";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-import "./carousel.css";
-
-// import required modules
-import { Pagination } from "swiper";
+import TestiCarousel from "./TestiCarousel";
 const Home = () => {
   const [bgPositionX, bgPositionY] = useContext(StateContext);
-  const isMobile = useMediaQuery({ query: "(max-width: 570px)" });
-
   return (
     <section className="">
       {/* heading section  */}
@@ -166,224 +156,78 @@ const Home = () => {
         <h4 className="position-relative d-inline-block pb-2 block-title">
           Testimonials
         </h4>
-        <div>
-          <Swiper
-            slidesPerView={isMobile ? "1" : "2"}
-            pagination={{ clickable: true }}
-            modules={[Pagination]}
-            className="mySwiper"
-          >
-            <SwiperSlide className="">
-              <div className="z-1" style={{ padding: "30px" }}>
-                <div
-                  className="d-flex align-items-center gap-3 border border-2 rounded rounded-4 px-3 pb-3 pt-4 position-relative"
-                  style={{ backgroundColor: "transparent", zIndex: "1" }}
-                >
-                  <FontAwesomeIcon
-                    style={{ color: "#e5e5e5", fontSize: "24px" }}
-                    icon={faQuoteLeft}
-                  ></FontAwesomeIcon>
-                  <div className="text-start">
-                    <p
-                      style={{
-                        fontStyle: "italic",
-                        fontSize: "14px",
-                        lineHeight: "1.75em",
-                      }}
-                    >
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Natus atque quia vero minus plus your last change
-                    </p>
-                    <h5
-                      style={{
-                        fontSize: "0.9em",
-                        fontWeight: "600",
-                        color: "black",
-                        marginBottom: "2px",
-                      }}
-                    >
-                      Ariful Islam
-                    </h5>
-                    <p
-                      className="m-0"
-                      style={{ fontSize: "0.8em", color: "#bbb" }}
-                    >
-                      bangladesh
-                    </p>
-                  </div>
-                  <img
-                    className="position-absolute rounded-circle "
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      left: "-30px",
-                      top: "-30px",
-                    }}
-                    src={image}
-                    alt=""
-                  />
-                  <div
-                    style={{
-                      display: "block",
-                      lineHeight: "44px",
-                      fontSize: "44px",
-                      position: "absolute",
-                      right: "-24px",
-                      bottom: "-24px",
-                      color: "#f5f5f5",
-                      zIndex: "-1",
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="">
-              <div className="z-1" style={{ padding: "30px" }}>
-                <div
-                  className="d-flex align-items-center gap-3 border border-2 rounded rounded-4 px-3 pb-3 pt-4 position-relative"
-                  style={{ backgroundColor: "transparent", zIndex: "1" }}
-                >
-                  <FontAwesomeIcon
-                    style={{ color: "#e5e5e5", fontSize: "24px" }}
-                    icon={faQuoteLeft}
-                  ></FontAwesomeIcon>
-                  <div className="text-start">
-                    <p
-                      style={{
-                        fontStyle: "italic",
-                        fontSize: "14px",
-                        lineHeight: "1.75em",
-                      }}
-                    >
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Natus atque quia vero minus plus your last change
-                    </p>
-                    <h5
-                      style={{
-                        fontSize: "0.9em",
-                        fontWeight: "600",
-                        color: "black",
-                        marginBottom: "2px",
-                      }}
-                    >
-                      Ariful Islam
-                    </h5>
-                    <p
-                      className="m-0"
-                      style={{ fontSize: "0.8em", color: "#bbb" }}
-                    >
-                      bangladesh
-                    </p>
-                  </div>
-                  <img
-                    className="position-absolute rounded-circle "
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      left: "-30px",
-                      top: "-30px",
-                    }}
-                    src={image}
-                    alt=""
-                  />
-                  <div
-                    style={{
-                      display: "block",
-                      lineHeight: "44px",
-                      fontSize: "44px",
-                      position: "absolute",
-                      right: "-24px",
-                      bottom: "-24px",
-                      color: "#f5f5f5",
-                      zIndex: "-1",
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="">
-              <div className="z-1" style={{ padding: "30px" }}>
-                <div
-                  className="d-flex align-items-center gap-3 border border-2 rounded rounded-4 px-3 pb-3 pt-4 position-relative"
-                  style={{ backgroundColor: "transparent", zIndex: "1" }}
-                >
-                  <FontAwesomeIcon
-                    style={{ color: "#e5e5e5", fontSize: "24px" }}
-                    icon={faQuoteLeft}
-                  ></FontAwesomeIcon>
-                  <div className="text-start">
-                    <p
-                      style={{
-                        fontStyle: "italic",
-                        fontSize: "14px",
-                        lineHeight: "1.75em",
-                      }}
-                    >
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Natus atque quia vero minus plus your last change
-                    </p>
-                    <h5
-                      style={{
-                        fontSize: "0.9em",
-                        fontWeight: "600",
-                        color: "black",
-                        marginBottom: "2px",
-                      }}
-                    >
-                      Ariful Islam
-                    </h5>
-                    <p
-                      className="m-0"
-                      style={{ fontSize: "0.8em", color: "#bbb" }}
-                    >
-                      bangladesh
-                    </p>
-                  </div>
-                  <img
-                    className="position-absolute rounded-circle "
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      left: "-30px",
-                      top: "-30px",
-                    }}
-                    src={image}
-                    alt=""
-                  />
-                  <div
-                    style={{
-                      display: "block",
-                      lineHeight: "44px",
-                      fontSize: "44px",
-                      position: "absolute",
-                      right: "-24px",
-                      bottom: "-24px",
-                      color: "#f5f5f5",
-                      zIndex: "-1",
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+        <div className="mt-4">
+          <TestiCarousel></TestiCarousel>
         </div>
       </div>
-      <div>
+      {/* Fun Facts  */}
+      <div className="mt-5">
         <h4 className="position-relative d-inline-block pb-2 block-title">
           Fun Facts
         </h4>
-        <div className="row">
+        <div className="mt-4 row g-4">
           <div className="col-xs-12 col-sm-3 ">
-            <div className="border border-2 rounded rounded-4 py-4 text-center hover-shadow">
-              <FontAwesomeIcon size="2x" icon={faHeart}></FontAwesomeIcon>
-              <p>Happy Clients</p>
-              <p className="fs-2">5021</p>
+            <div
+              className="py-4 text-center hover-shadow"
+              style={{ border: "2px solid #e5e5e5", borderRadius: "10px" }}
+            >
+              <FontAwesomeIcon
+                size="2x"
+                icon={faHeart}
+                style={{ color: "#007ced" }}
+              ></FontAwesomeIcon>
+              <p className="m-3 fw-bolder">Happy Clients</p>
+              <p className="fs-1 mt-2 mb-1" style={{ color: "#d5d5d5" }}>
+                04
+              </p>
+            </div>
+          </div>
+          <div className="col-xs-12 col-sm-3 ">
+            <div
+              className="py-4 text-center hover-shadow"
+              style={{ border: "2px solid #e5e5e5", borderRadius: "10px" }}
+            >
+              <FontAwesomeIcon
+                size="2x"
+                icon={faClock}
+                style={{ color: "#007ced" }}
+              ></FontAwesomeIcon>
+              <p className="m-3 fw-bolder">Working Hours</p>
+              <p className="fs-1 mt-2 mb-1" style={{ color: "#d5d5d5" }}>
+                4,570
+              </p>
+            </div>
+          </div>
+          <div className="col-xs-12 col-sm-3 ">
+            <div
+              className="py-4 text-center hover-shadow"
+              style={{ border: "2px solid #e5e5e5", borderRadius: "10px" }}
+            >
+              <FontAwesomeIcon
+                size="2x"
+                icon={faStar}
+                style={{ color: "#007ced" }}
+              ></FontAwesomeIcon>
+              <p className="m-3 fw-bolder">Award Winning</p>
+              <p className="fs-1 mt-2 mb-1" style={{ color: "#d5d5d5" }}>
+                01
+              </p>
+            </div>
+          </div>
+          <div className="col-xs-12 col-sm-3 ">
+            <div
+              className="py-4 text-center hover-shadow"
+              style={{ border: "2px solid #e5e5e5", borderRadius: "10px" }}
+            >
+              <FontAwesomeIcon
+                size="2x"
+                icon={faMugHot}
+                style={{ color: "#007ced" }}
+              ></FontAwesomeIcon>
+              <p className="m-3 fw-bolder">Tea Consumed</p>
+              <p className="fs-1 mt-2 mb-1" style={{ color: "#d5d5d5" }}>
+                1,364
+              </p>
             </div>
           </div>
         </div>
