@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faNewspaper } from "@fortawesome/free-regular-svg-icons";
 const Blog = () => {
   return (
-    <div className="col-xs-12 col-sm-4 p-0 m-0">
+    <div className="col-xs-12 col-sm-6 p-0 m-0">
       <div className="p-3">
         <div>
           <div className="position-relative overflow-hidden">

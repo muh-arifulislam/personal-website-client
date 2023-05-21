@@ -35,7 +35,7 @@ const Resume = () => {
   const industrialAttach = {
     yearStart: 2022,
     yearEnd: "2023",
-    institute: "Artificial Intelligence & Technology",
+    institute: "Artificial Intelligence & Technology Institute",
     major: "Web Development",
     description:
       "Here's I completed 4 month Industrial Attachment for Industry Level Experience and which was a part of 8th semester of my CSE Degree.",

@@ -1,20 +1,11 @@
 import React, { useState } from "react";
-import image from "../assets/images/portfolioItem.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookF,
-  faGithub,
-  faLinkedinIn,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faCalendar,
-  faGlobe,
   faReceipt,
-  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 const ProjectItem = ({ data, setProject, isGrid, id }) => {
   const [hover, setHover] = useState(false);
+  const { title,thumb } = data;
   return (
     <div className={`${isGrid && "col-xs-12 col-sm-6 "}`}>
       <div className="">
@@ -36,14 +27,14 @@ const ProjectItem = ({ data, setProject, isGrid, id }) => {
                 transition: "all 0.3s ease-out",
                 transform: `scale(${hover ? "1.2" : "1"})`,
               }}
-              src={image}
+              src={thumb}
               alt=""
             />
             <div
               className="px-2 rounded-3 bg-white position-absolute"
               style={{ top: "20px", left: "20px" }}
             >
-              <span className="fw-semibold">{data.title}</span>
+              <span className="fw-semibold">{title}</span>
             </div>
             <div
               className="position-absolute"

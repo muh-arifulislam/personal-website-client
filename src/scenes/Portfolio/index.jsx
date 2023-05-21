@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import PageTittle from "../../components/PageTittle";
-import image from "../../assets/images/portfolioItem.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -22,12 +21,13 @@ const Porfolio = () => {
   const [projects, setProjects] = useState([]);
   const [project, setProject] = useState({});
   useEffect(() => {
-    setTimeout(() => {
-      setProjects([
-        { title: "fullstack projects" },
-        { title: "frontend projects" },
-      ]);
-    }, 1000);
+    fetch("projects.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setTimeout(() => {
+          setProjects(data);
+        }, 1000);
+      });
   }, []);
   return (
     <div className="position-relative">
