@@ -2,14 +2,8 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBullhorn,
-  faCoffee,
-  faDesktop,
-  faHeart,
-  faPencil,
   faQuoteLeft,
   faQuoteRight,
-  faStore,
 } from "@fortawesome/free-solid-svg-icons";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -23,6 +17,7 @@ import "./carousel.css";
 // import required modules
 import { Pagination, Autoplay } from "swiper";
 import image from "../../assets/images/person.jpg";
+import personImage from "../../assets/images/man.png";
 const TestiCarousel = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 570px)" });
   return (
@@ -55,8 +50,7 @@ const TestiCarousel = () => {
                   lineHeight: "1.75em",
                 }}
               >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
-                atque quia vero minus plus your last change
+                Our website's transformation was exceptional. The developer's attention to detail exceeded expectations.
               </p>
               <h5
                 style={{
@@ -66,10 +60,10 @@ const TestiCarousel = () => {
                   marginBottom: "2px",
                 }}
               >
-                Ariful Islam
+                Arif Hawladar
               </h5>
               <p className="m-0" style={{ fontSize: "0.8em", color: "#bbb" }}>
-                bangladesh
+                India
               </p>
             </div>
             <img
@@ -80,7 +74,7 @@ const TestiCarousel = () => {
                 left: "-30px",
                 top: "-30px",
               }}
-              src={image}
+              src={personImage}
               alt=""
             />
             <div
@@ -118,8 +112,7 @@ const TestiCarousel = () => {
                   lineHeight: "1.75em",
                 }}
               >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
-                atque quia vero minus plus your last change
+                Our website's transformation was exceptional. The developer's attention to detail exceeded expectations.
               </p>
               <h5
                 style={{
@@ -129,10 +122,10 @@ const TestiCarousel = () => {
                   marginBottom: "2px",
                 }}
               >
-                Ariful Islam
+                Sheldon Cooper
               </h5>
               <p className="m-0" style={{ fontSize: "0.8em", color: "#bbb" }}>
-                bangladesh
+                USA
               </p>
             </div>
             <img
@@ -143,7 +136,7 @@ const TestiCarousel = () => {
                 left: "-30px",
                 top: "-30px",
               }}
-              src={image}
+              src={personImage}
               alt=""
             />
             <div
@@ -181,8 +174,7 @@ const TestiCarousel = () => {
                   lineHeight: "1.75em",
                 }}
               >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
-                atque quia vero minus plus your last change
+                Working with the web developer was a seamless experience, delivering a professional and responsive website.
               </p>
               <h5
                 style={{
@@ -192,10 +184,10 @@ const TestiCarousel = () => {
                   marginBottom: "2px",
                 }}
               >
-                Ariful Islam
+                Fahim Ahmed 
               </h5>
               <p className="m-0" style={{ fontSize: "0.8em", color: "#bbb" }}>
-                bangladesh
+                Bangladesh
               </p>
             </div>
             <img
@@ -206,7 +198,7 @@ const TestiCarousel = () => {
                 left: "-30px",
                 top: "-30px",
               }}
-              src={image}
+              src={personImage}
               alt=""
             />
             <div
@@ -244,8 +236,7 @@ const TestiCarousel = () => {
                   lineHeight: "1.75em",
                 }}
               >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
-                atque quia vero minus plus your last change
+                Working with the web developer was a seamless experience, delivering a professional and responsive website.
               </p>
               <h5
                 style={{
@@ -255,10 +246,10 @@ const TestiCarousel = () => {
                   marginBottom: "2px",
                 }}
               >
-                Ariful Islam
+                Sabbir Rahman
               </h5>
               <p className="m-0" style={{ fontSize: "0.8em", color: "#bbb" }}>
-                bangladesh
+                Bangladesh
               </p>
             </div>
             <img
@@ -269,7 +260,7 @@ const TestiCarousel = () => {
                 left: "-30px",
                 top: "-30px",
               }}
-              src={image}
+              src={personImage}
               alt=""
             />
             <div

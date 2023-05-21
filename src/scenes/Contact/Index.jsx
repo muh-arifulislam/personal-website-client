@@ -34,8 +34,8 @@ const Contact = () => {
                 ></FontAwesomeIcon>
               </div>
               <div className="ps-3">
-                <h4 className="fs-5 mb-1">+880 1306-56-07-47</h4>
-                <p className="fs-6">
+                <h4 className="mb-1" style={{fontSize:"16px",fontWeight:"600"}}>+88 0130-6560-747</h4>
+                <p className="" style={{fontSize:"14px",color:"#666"}}>
                   Nock nock!! Give me a text on Whatsapp. 
                 </p>
               </div>
@@ -49,8 +49,8 @@ const Contact = () => {
                 ></FontAwesomeIcon>
               </div>
               <div className="ps-3">
-                <h4 className="fs-5 mb-1">Sadar South, Cumilla</h4>
-                <p className="fs-6">
+                <h4 className=" mb-1" style={{fontSize:"16px",fontWeight:"600"}}>Sadar South, Cumilla</h4>
+                <p className="" style={{fontSize:"14px",color:"#666"}}>
                   Sadar South, Cumilla, Bangladesh
                 </p>
               </div>
@@ -64,8 +64,8 @@ const Contact = () => {
                 ></FontAwesomeIcon>
               </div>
               <div className="ps-3">
-                <h4 className="fs-5 mb-1" style={{wordBreak:"break-word"}}>ariful.islam20234@gmail.com</h4>
-                <p className="fs-6">
+                <h4 className=" mb-1" style={{fontSize:"16px",fontWeight:"600",wordBreak:"break-word"}}>ariful.islam20234@gmail.com</h4>
+                <p className="" style={{fontSize:"14px",color:"#666"}}>
                   Say hi on email! I always appreciate
                   meeting new people.
                 </p>

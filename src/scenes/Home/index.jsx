@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import personImg from "../../assets/images/person.jpg";
 import StateContext from "../../state/StateContext";
@@ -35,18 +35,27 @@ import { Pagination, Navigation } from "swiper";
 import ProjectItem from "../../components/ProjectItem";
 import { Link, useNavigate } from "react-router-dom";
 import Offcanvas from "../../components/Offcanvas";
-import { faFigma, faReact, faWordpress } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFigma,
+  faReact,
+  faWordpress,
+} from "@fortawesome/free-brands-svg-icons";
 const Home = () => {
   const navigate = useNavigate();
-  const [projects, setProjects] = useState([
-    { title: "fullstack website" },
-    { title: "frontend website" },
-    { title: "backend website" },
-    { title: "tackend website" },
-  ]);
+  const [projects, setProjects] = useState([]);
   const [project, setProject] = useState({});
   const [bgPositionX, bgPositionY] = useContext(StateContext);
   const isMobile = useMediaQuery({ query: "(max-width: 570px)" });
+  useEffect(() => {
+    fetch("projects.json")
+      .then((res) => res.json())
+      .then((data) => {
+        let newData = [];
+        newData.push(data[0]);
+        newData.push(data[1]);
+        setProjects(newData);
+      });
+  }, []);
   return (
     <section className="">
       {/* heading section  */}
@@ -123,10 +132,7 @@ const Home = () => {
                   Fullstack Development
                 </h4>
                 <p className="" style={{ fontSize: "0.92em", color: "#666" }}>
-                  Mauris neque libero, aliquet vel mollis nec, euismod sed
-                  tellus. Mauris convallis dictum elit id volutpat. Vivamus
-                  blandit, dolor vitae lacinia maximus, risus velit vehicula
-                  odio, a tincidunt turpis turpis tempus ex.
+                As a Fullstack Developer, I specialize in both front-end and back-end development, leveraging my skills to build robust and user-friendly web applications that drive seamless user experiences and deliver exceptional results.
                 </p>
               </div>
             </div>
@@ -140,10 +146,7 @@ const Home = () => {
                   CMS
                 </h4>
                 <p style={{ fontSize: "0.92em", color: "#666" }}>
-                  Mauris neque libero, aliquet vel mollis nec, euismod sed
-                  tellus. Mauris convallis dictum elit id volutpat. Vivamus
-                  blandit, dolor vitae lacinia maximus, risus velit vehicula
-                  odio, a tincidunt turpis turpis tempus ex.
+                Experienced WordPress developer proficient in custom theme development, plugin integration, and website optimization. Committed to delivering high-quality, scalable WordPress solutions that meet client requirements and exceed expectations.
                 </p>
               </div>
             </div>
@@ -157,15 +160,15 @@ const Home = () => {
                   Frontend Design
                 </h4>
                 <p style={{ fontSize: "0.92em", color: "#666" }}>
-                  Mauris neque libero, aliquet vel mollis nec, euismod sed
-                  tellus. Mauris convallis dictum elit id volutpat. Vivamus
-                  blandit, dolor vitae lacinia maximus, risus velit vehicula
-                  odio, a tincidunt turpis turpis tempus ex.
+                Passionate frontend designer with a strong eye for aesthetics and user-centric design. Skilled in crafting visually appealing and intuitive interfaces that enhance user engagement and deliver a delightful browsing experience.
                 </p>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-12 d-flex gap-4 align-items-top">
-              <FontAwesomeIcon size="xl" icon={faChalkboardUser}></FontAwesomeIcon>
+              <FontAwesomeIcon
+                size="xl"
+                icon={faChalkboardUser}
+              ></FontAwesomeIcon>
               <div>
                 <h4
                   className="lh-1 fs-6"
@@ -174,10 +177,7 @@ const Home = () => {
                   Tutor
                 </h4>
                 <p style={{ fontSize: "0.92em", color: "#666" }}>
-                  Mauris neque libero, aliquet vel mollis nec, euismod sed
-                  tellus. Mauris convallis dictum elit id volutpat. Vivamus
-                  blandit, dolor vitae lacinia maximus, risus velit vehicula
-                  odio, a tincidunt turpis turpis tempus ex.
+                Dedicated web development instructor with a passion for empowering students to excel in the field. Expertise in teaching various programming languages and frameworks, practical skills and a strong foundation in web development principles.
                 </p>
               </div>
             </div>
@@ -214,7 +214,6 @@ const Home = () => {
                 id="offcanvasHome"
                 data={project}
                 setProject={setProject}
-                
               ></ProjectItem>
             </SwiperSlide>
           ))}

@@ -91,6 +91,7 @@ const Resume = () => {
           </div>
           <SkillItem name="UX/UI Design" value="70"></SkillItem>
           <SkillItem name="Graphic Design" value="60"></SkillItem>
+          <SkillItem name="Responsive Web Design" value="85"></SkillItem>
         </div>
         <div className="col-xs12 col-sm-6">
           <div className="mb-4">
