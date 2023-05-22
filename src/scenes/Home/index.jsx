@@ -132,7 +132,10 @@ const Home = () => {
                   Fullstack Development
                 </h4>
                 <p className="" style={{ fontSize: "0.92em", color: "#666" }}>
-                As a Fullstack Developer, I specialize in both front-end and back-end development, leveraging my skills to build robust and user-friendly web applications that drive seamless user experiences and deliver exceptional results.
+                  As a Fullstack Developer, I specialize in both front-end and
+                  back-end development, leveraging my skills to build robust and
+                  user-friendly web applications that drive seamless user
+                  experiences and deliver exceptional results.
                 </p>
               </div>
             </div>
@@ -146,7 +149,11 @@ const Home = () => {
                   CMS
                 </h4>
                 <p style={{ fontSize: "0.92em", color: "#666" }}>
-                Experienced WordPress developer proficient in custom theme development, plugin integration, and website optimization. Committed to delivering high-quality, scalable WordPress solutions that meet client requirements and exceed expectations.
+                  Experienced WordPress developer proficient in custom theme
+                  development, plugin integration, and website optimization.
+                  Committed to delivering high-quality, scalable WordPress
+                  solutions that meet client requirements and exceed
+                  expectations.
                 </p>
               </div>
             </div>
@@ -160,7 +167,10 @@ const Home = () => {
                   Frontend Design
                 </h4>
                 <p style={{ fontSize: "0.92em", color: "#666" }}>
-                Passionate frontend designer with a strong eye for aesthetics and user-centric design. Skilled in crafting visually appealing and intuitive interfaces that enhance user engagement and deliver a delightful browsing experience.
+                  Passionate frontend designer with a strong eye for aesthetics
+                  and user-centric design. Skilled in crafting visually
+                  appealing and intuitive interfaces that enhance user
+                  engagement and deliver a delightful browsing experience.
                 </p>
               </div>
             </div>
@@ -177,7 +187,11 @@ const Home = () => {
                   Tutor
                 </h4>
                 <p style={{ fontSize: "0.92em", color: "#666" }}>
-                Dedicated web development instructor with a passion for empowering students to excel in the field. Expertise in teaching various programming languages and frameworks, practical skills and a strong foundation in web development principles.
+                  Dedicated web development instructor with a passion for
+                  empowering students to excel in the field. Expertise in
+                  teaching various programming languages and frameworks,
+                  practical skills and a strong foundation in web development
+                  principles.
                 </p>
               </div>
             </div>
@@ -203,9 +217,8 @@ const Home = () => {
           slidesPerView={isMobile ? "1" : "2"}
           spaceBetween={20}
           loop={true}
-          navigation={!isMobile}
           pagination={isMobile}
-          modules={isMobile ? [Pagination] : [Navigation]}
+          modules={[Pagination]}
           className="mySwiper"
         >
           {projects.map((project, idx) => (

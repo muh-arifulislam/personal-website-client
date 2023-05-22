@@ -19,7 +19,6 @@ import Offcanvas from "../../components/Offcanvas";
 const Porfolio = () => {
   const [hover, setHover] = useState(false);
   const [projects, setProjects] = useState([]);
-  const [project, setProject] = useState({});
   useEffect(() => {
     fetch("projects.json")
       .then((res) => res.json())
@@ -42,18 +41,14 @@ const Porfolio = () => {
           ) : (
             projects.map((project, idx) => (
               <ProjectItem
-                id="offcanvasProjects"
                 isGrid={true}
                 data={project}
-                setProject={setProject}
                 key={idx}
               ></ProjectItem>
             ))
           )}
         </div>
       </div>
-      {/* Offcanvas  */}
-      <Offcanvas project={project} id="offcanvasProjects"></Offcanvas>
     </div>
   );
 };

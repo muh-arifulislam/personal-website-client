@@ -18,6 +18,7 @@ import {
   faLinkedinIn,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import ProjectDescr from "./scenes/ProjectDescr";
 function App() {
   const [bgPositionX, setBgPositionX] = useState(0);
   const [bgPositionY, setBgPositionY] = useState(0);
@@ -41,6 +42,10 @@ function App() {
             <Route path="/me" element={<About></About>}></Route>
             <Route path="/resume" element={<Resume></Resume>}></Route>
             <Route path="/portfolio" element={<Portfolio></Portfolio>}></Route>
+            <Route
+              path="/portfolio/:id"
+              element={<ProjectDescr></ProjectDescr>}
+            ></Route>
             <Route path="/article" element={<Article></Article>}></Route>
             <Route
               path="/article/:title"
