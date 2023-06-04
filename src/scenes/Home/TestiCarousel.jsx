@@ -1,10 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faQuoteLeft,
-  faQuoteRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -25,10 +22,10 @@ const TestiCarousel = () => {
       slidesPerView={isMobile ? "1" : "2"}
       pagination={{ clickable: true }}
       loop={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
+      // autoplay={{
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // }}
       modules={[Pagination, Autoplay]}
       className="mySwiper"
     >
@@ -50,7 +47,8 @@ const TestiCarousel = () => {
                   lineHeight: "1.75em",
                 }}
               >
-                Our website's transformation was exceptional. The developer's attention to detail exceeded expectations.
+                Our website's transformation was exceptional. The developer's
+                attention to detail exceeded expectations.
               </p>
               <h5
                 style={{
@@ -112,7 +110,8 @@ const TestiCarousel = () => {
                   lineHeight: "1.75em",
                 }}
               >
-                Our website's transformation was exceptional. The developer's attention to detail exceeded expectations.
+                Our website's transformation was exceptional. The developer's
+                attention to detail exceeded expectations.
               </p>
               <h5
                 style={{
@@ -174,7 +173,8 @@ const TestiCarousel = () => {
                   lineHeight: "1.75em",
                 }}
               >
-                Working with the web developer was a seamless experience, delivering a professional and responsive website.
+                Working with the web developer was a seamless experience,
+                delivering a professional and responsive website.
               </p>
               <h5
                 style={{
@@ -184,7 +184,7 @@ const TestiCarousel = () => {
                   marginBottom: "2px",
                 }}
               >
-                Fahim Ahmed 
+                Fahim Ahmed
               </h5>
               <p className="m-0" style={{ fontSize: "0.8em", color: "#bbb" }}>
                 Bangladesh
@@ -222,7 +222,10 @@ const TestiCarousel = () => {
         <div className="z-1" style={{ padding: "30px" }}>
           <div
             className="d-flex align-items-center gap-3 border border-2 rounded rounded-4 px-3 pb-3 pt-4 position-relative"
-            style={{ backgroundColor: "transparent", zIndex: "1" }}
+            style={{
+              backgroundColor: "#ddd",
+              zIndex: "999!important",
+            }}
           >
             <FontAwesomeIcon
               style={{ color: "#e5e5e5", fontSize: "24px" }}
@@ -236,7 +239,8 @@ const TestiCarousel = () => {
                   lineHeight: "1.75em",
                 }}
               >
-                Working with the web developer was a seamless experience, delivering a professional and responsive website.
+                Working with the web developer was a seamless experience,
+                delivering a professional and responsive website.
               </p>
               <h5
                 style={{
@@ -272,7 +276,7 @@ const TestiCarousel = () => {
                 right: "-24px",
                 bottom: "-24px",
                 color: "#f5f5f5",
-                zIndex: "-1",
+                zIndex: "9",
               }}
             >
               <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>

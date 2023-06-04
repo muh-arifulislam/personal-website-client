@@ -299,6 +299,51 @@ body {
   animation: wave 1.5s linear infinite;
 }
 
+.background-qube {
+  width: 140px;
+  height: 140px;
+  background-color: rgba(220, 220, 220, 0.35);
+  border: 5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+.background-qube-tl {
+  top: 0;
+  left: 0;
+  transform: rotate(45deg) translateX(-50%);
+}
+.background-qube-tr {
+  top: 0;
+  right: 0;
+  transform: rotate(45deg) translateX(-80%) translateY(-50%);
+}
+.background-qube-br {
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg) translateX(50%) translateY(0);
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  z-index: 100;
+  display: inline-block;
+  padding: 0;
+  background-color: #fafafa;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  opacity: 0;
+  border-radius: 8px;
+  transition: opacity 0.5s ease-out;
+}
+.scroll-to-top.show {
+  opacity: 1;
+}
 @keyframes wave {
   0% {
     background-position: 100% 0;
